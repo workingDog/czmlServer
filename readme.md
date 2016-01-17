@@ -1,6 +1,6 @@
 # An Akka websocket server and a Cesium client to excersice the ScalaCZML library 
 
-The [ScalaCZML](https://github.com/workingDog/scalaczml) is used here with a sample Akka websocket server to 
+The [ScalaCZML library](https://github.com/workingDog/scalaczml) is used here with a sample Akka websocket server to 
 send a CZML document to a Cesium client, which then displays the result on the globe.
 
 ## How to use
@@ -8,7 +8,7 @@ send a CZML document to a Cesium client, which then displays the result on the g
 Download and unzip this repository. 
 
 Install [Cesium](https://cesiumjs.org/) and look at the [getting started tutorial](https://cesiumjs.org/tutorials/cesium-up-and-running/) 
-to setup the web Node server, typically in a terminal: 
+to setup the web Node server, typically in a terminal in the Cesium directory: 
 
     node server.js
 
