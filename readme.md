@@ -1,7 +1,8 @@
 # An Akka websocket server and a Cesium client to excersice the ScalaCZML library 
 
-The [ScalaCZML library](https://github.com/workingDog/scalaczml) is used here with a sample Akka websocket server to 
-send a CZML document to a Cesium client, which then displays the result on the globe.
+A basic [Akka](http://akka.io/) websocket server is using the [ScalaCZML library](https://github.com/workingDog/scalaczml) to 
+send a [CZML](https://github.com/AnalyticalGraphicsInc/cesium/wiki/CZML-Guide) document to a [Cesium](https://cesiumjs.org/) client, 
+which then displays the result on the globe.
 
 ## How to use
  
