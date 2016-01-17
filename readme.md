@@ -14,9 +14,9 @@ to setup the web Node server, typically in a terminal:
 
 This will run the local web server for Cesium.
 
-Put the file [CzmlClient.html](https://github.com/workingDog/scalaczml) in the same Cesium directory as the "HelloWorld.html" example, the "Apps" directory.
+Put the file [CzmlClient.html](https://github.com/workingDog/czmlServer/blob/master/CzmlClient.html) in the same Cesium directory as the "HelloWorld.html" example, the "Apps" directory.
 
-In another terminal navigate to the downloaded "akka-server" directory and type: 
+In another terminal navigate to the downloaded "czmlServer" directory and type: 
 
     sbt run
 
@@ -37,7 +37,7 @@ That's it.
      in the "Cesium-1.17" directory
      node server.js
   
-     in the "akka-server" directory
+     in the "czmlServer" directory
      sbt run 
  
      point browser to http://localhost:8080/Apps/CzmlClient.html
