@@ -43,10 +43,8 @@ object AkkaServer extends App {
   val bill = new Billboard(image = "https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png", show = true, scale = 0.1)
   // create a label property
   val label = new Label(pixelOffset = CzmlCartesian2(22, 44), text = "some text label", font = "11pt Lucida Console")
-  // create a czml packet with all the created properties
-  val packet = new CZMLPacket("test packet", mutable.HashSet[CzmlProperty](pos, bill, label))
-  // add the packet to the czml document
-  czml.packets += packet
+  // create a czml packet with all the created properties add it to the czml document
+  czml.packets += new CZMLPacket("test packet", mutable.HashSet[CzmlProperty](pos, bill, label))
   // convert the czml document to json
   val jsczml = Json.toJson(czml)
 
@@ -66,7 +64,7 @@ object AkkaServer extends App {
 
   // the point of entry into the server services
   val route =
-    path("") {
+    pathEndOrSingleSlash {
       get {
         handleWebsocketMessages(czmlWebsocketService)
       }
@@ -85,4 +83,3 @@ object AkkaServer extends App {
     .onComplete(_ => system.terminate())
 
 }
-
