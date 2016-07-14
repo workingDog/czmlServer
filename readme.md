@@ -1,6 +1,6 @@
 # An Akka websocket server and a Cesium client to excersice the ScalaCZML library 
 
-A basic [Akka](http://akka.io/) websocket server is using the [ScalaCZML library](https://github.com/workingDog/scalaczml) to 
+A basic [Akka](http://akka.io/) websocket server is using the [ScalaCZML](https://github.com/workingDog/scalaczml) library to
 send a [CZML](https://github.com/AnalyticalGraphicsInc/cesium/wiki/CZML-Guide) document to a [Cesium](https://cesiumjs.org/) client, 
 which then displays the result on the globe.
 
@@ -15,7 +15,7 @@ to setup the web Node server, typically in a terminal in the Cesium directory:
 
 This will run the local web server for Cesium.
 
-Put the file [CzmlClient.html](https://github.com/workingDog/czmlServer/blob/master/CzmlClient.html) in the same Cesium directory as the "HelloWorld.html" example, the "Apps" directory.
+Put the file [CzmlClient.html](https://github.com/workingDog/czmlServer/blob/master/CzmlClient.html) in the Cesium "Apps" directory.
 
 In another terminal navigate to the downloaded "czmlServer-master" directory and type: 
 
@@ -33,21 +33,21 @@ Do not press RETURN yet.
 Point your browser to "http://localhost:8080/Apps/CzmlClient.html" and the globe should be visible.
 Rotate the globe to Australia and you should see a TV test pattern image and a text label near Sydney.
 
-That's it. 
+In summary.
 
-     in the "Cesium-1.17" directory
+     in the "Cesium-x.xx" directory
      node server.js
   
      in the "czmlServer-master" directory
      sbt run 
  
-     point browser to http://localhost:8080/Apps/CzmlClient.html
+     point your browser to http://localhost:8080/Apps/CzmlClient.html
      go to Sydney Australia
  
 ## Dependencies
 
-[Cesium-1.17](https://cesiumjs.org/), [SBT](http://www.scala-sbt.org/), [Node.js](https://nodejs.org/en/) and 
-[ScalaCZML](https://github.com/workingDog/scalaczml) (included in the lib directory).
+[Cesium](https://cesiumjs.org/), [SBT](http://www.scala-sbt.org/), [Node.js](https://nodejs.org/en/) and
+[ScalaCZML](https://github.com/workingDog/scalaczml).
 
 See also the build.sbt file.
 

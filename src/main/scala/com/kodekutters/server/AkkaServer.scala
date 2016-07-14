@@ -3,11 +3,11 @@ package com.kodekutters.server
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model.ws.{Message, TextMessage}
+import akka.http.scaladsl.model.ws.{BinaryMessage, Message, TextMessage}
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.{Flow, Source}
-
+import akka.http.scaladsl.server.Directives._
 import com.kodekutters.czml.czmlCore._
 import com.kodekutters.czml.czmlProperties._
 import com.kodekutters.czml.CzmlImplicits._
@@ -16,6 +16,7 @@ import play.api.libs.json.Json
 
 import scala.collection.mutable
 import scala.io.StdIn
+
 
 
 /**
@@ -52,7 +53,7 @@ object AkkaServer extends App {
   val host = "localhost"
   val port = 3210
 
-  // handle the client request (any text message will do) for some CZML data
+  // handle the client request for some CZML data (any text message will be accepted)
   val czmlWebsocketService =
     Flow[Message]
       .collect {
@@ -66,7 +67,7 @@ object AkkaServer extends App {
   val route =
     pathEndOrSingleSlash {
       get {
-        handleWebsocketMessages(czmlWebsocketService)
+        handleWebSocketMessages(czmlWebsocketService)
       }
     }
 
